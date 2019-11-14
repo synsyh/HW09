@@ -37,7 +37,7 @@ class Repository:
                 if self.header:
                     next(f)
                 for line in f:
-                    items = line.strip().split(';')
+                    items = line.strip().split('\t')
                     # process files with the wrong number of fields
                     if len(items) != 3:
                         raise ValueError(f'can not process {line}')
@@ -61,7 +61,7 @@ class Repository:
                 if self.header:
                     next(f)
                 for line in f:
-                    items = line.strip().split('|')
+                    items = line.strip().split('\t')
                     # process files with the wrong number of fields
                     if len(items) != 3:
                         raise ValueError(f'can not process {line}')
@@ -85,7 +85,7 @@ class Repository:
                 if self.header:
                     next(f)
                 for line in f:
-                    items = line.strip().split('|')
+                    items = line.strip().split('\t')
                     # process files with the wrong number of fields
                     if len(items) != 4:
                         raise ValueError(f'can not process {line}')
