@@ -246,10 +246,12 @@ class Majors:
 
 
 def main():
-    sit = Repository('SIT_HW10', header=True)
-    # print(sit.pretty_print('student'))
-    # print(sit.pretty_print('instructor'))
-    # print(sit.pretty_print('majors'))
+    try:
+        sit = Repository('SIT_HW10', header=True)
+    except ValueError as e:
+        print(e)
+    except FileNotFoundError as e:
+        print(e)
 
 
 if __name__ == '__main__':
